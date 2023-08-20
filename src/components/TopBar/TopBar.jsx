@@ -1,16 +1,16 @@
 import React from "react";
 import "./TopBar.css";
-import { Person, Search } from "@mui/icons-material";
+import { Chat, Notifications, Person, Search } from "@mui/icons-material";
 
 export default function TopBar() {
   return (
-    <div className="topbarcontainer">
-      <div className="topbarLeft">
+    <div className="topbar-container">
+      <div className="topbar-left">
         <span className="logo">social media</span>
       </div>
-      <div className="topbarCenter">
+      <div className="topbar-center">
         <div className="searchbar">
-          <Search />
+          <Search sx={{fontSize:"20px" , marginLeft:"10px"}} />
           <input
             className="search-input"
             placeholder="search for friend , post , ..."
@@ -18,7 +18,7 @@ export default function TopBar() {
           />
         </div>
       </div>
-      <div className="topbarRight">
+      <div className="topbar-right">
         <div className="topbarLinks">
           <span className="topbarLink">Home page</span>
           <span className="topbarLink">Timeline</span>
@@ -30,7 +30,20 @@ export default function TopBar() {
                     1
                 </span>
             </div>
+            <div className="topbarIconItem">
+                <Chat/>
+                <span className="topbarIconBadge">
+                    1
+                </span>
+            </div>
+            <div className="topbarIconItem">
+                <Notifications/>
+                <span className="topbarIconBadge">
+                    1
+                </span>
+            </div>
         </div>
+        <img src="/assets/person/1.jpeg" alt=""  className="topbarImg"/>
       </div>
     </div>
   );
